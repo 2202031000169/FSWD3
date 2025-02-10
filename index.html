@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-900">
+
+    <div class="px-10 md:px-40">
+
+        <!--Navbar  -->
+        <nav class="flex justify-between items-center h-24">
+            <!-- Logo -->
+            <a href="#" id="logo" class="text-sky-500 text-3xl font-bold border-2 border-sky-500 px-2 py-1 z-10">A.</a>
+
+            <!-- Desktop Menu -->
+             <ul class="md:flex space-x-10 hidden">
+                <li>
+                    <a href="#" class="text-sky-500">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white hover:text-sky-500">My Intro</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white hover:text-sky-500">Services</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white hover:text-sky-500">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white hover:text-sky-500">Blog</a>
+                </li>
+                <li>
+                    <a href="#" class="text-white bg-sky-500 px-6 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-600">Hire Me</a>
+                </li>
+             </ul>
+
+             <!-- Hamburger -->
+              <a href="#" id="burger" class="text-white text-2xl md:hidden">
+                <i class="fa-solid fa-bars"></i>
+              </a>
+        </nav>
+
+        <!-- Hero Section -->
+         <section class="flex md:flex-row flex-col justify-between">
+            <div class="pt-16 md:pt-32">
+                <span class="text-white text-xl">👋 Hi, I am</span>
+                <h1 class="text-sky-500 text-6xl md:text-7xl font-bold font-serif mt-2 mb-5">Prachi Raval</h1>
+                <h2 class="text-sky-400 font-bold uppercase text-xl md:text-2xl">Web Developer / Designer</h2>
+                <p class="text-gray-400 max-w-lg mt-6 mb-16">
+                    I'm a web developer and designer, crafting responsive, user friendly websites that combine functionality with creative design to deliver seamless digital experiences.
+                </p>
+                <div class="space-x-5">
+                    <a href="Assets/Resume_Prachi Sumit Raval.pdf" download="MyPortfolio" class="text-white bg-sky-500 px-6 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-600">Download CV</a>
+                    <a href="#" class="text-white px-6 py-2 rounded-full border-2 border-sky-500 hover:bg-sky-600">Contact Me</a>
+                </div>
+            </div>
+            <img src="Assets/Prachi.png" class="w-full md:w-1/2 mt-10 md:mt-0">
+         </section>
+        <!-- Mobile Menu -->
+
+        <ul id="list" class="flex flex-col justify-center items-center space-y-10 md:hidden bg-sky-500 absolute top-0 bottom-0 left-0 w-60 transform -translate-x-full transition:transform duration-300">
+            <li>
+                <a href="#" class="text-slate-900">Home</a>
+            </li>
+            <li>
+                <a href="#" class="text-white hover:text-slate-900">My Intro</a>
+            </li>
+            <li>
+                <a href="#" class="text-white hover:text-slate-900">Services</a>
+            </li>
+            <li>
+                <a href="#" class="text-white hover:text-slate-900">Portfolio</a>
+            </li>
+            <li>
+                <a href="#" class="text-white hover:text-slate-900">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="text-white bg-sky-600 px-6 py-2 rounded-full border-2 border-sky-700 hover:bg-sky-600">Hire Me</a>
+            </li>
+         </ul>
+
+
+    </div>
+    
+
+<!-- Javascript -->
+ <script>
+    const list = document.getElementById('list');
+    const Hamburger = document.getElementById('burger');
+    const bars = document.querySelector('.fa-bars');
+    const logo = document.getElementById('logo');
+
+    Hamburger.addEventListener('click', ()=>{
+        list.classList.toggle('translate-x-0');
+        bars.classList.toggle('fa-xmark');
+        logo.classList.toggle('text-slate-900');
+        logo.classList.toggle('border-slate-900');
+    })
+ </script>
+</body>
+</html>
